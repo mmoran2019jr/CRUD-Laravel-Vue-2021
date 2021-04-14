@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Bienvenido a mi CRUD</title>
+        <title>CRUD</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -14,6 +14,9 @@
         <style>
             html, body {
                 background-color: #fff;
+                background-image: url("images/fondo.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
                 color: #636b6f;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
@@ -61,14 +64,24 @@
 
             .m-b-md {
                 margin-bottom: 30px;
+                color: black;
+                font-style: oblique !important;
+                font-weight: 700; 
             }
 
-            #a1{
+            .a{
                 background-color: black;
-                color: white;
-                font-size: 20px;
+                color: white !important;
+                font-size: 18px !important;
+                font-style: oblique !important;
                 border-radius: 10px;
             }
+
+            .a:hover{
+                background-color: #195781;
+                text-decoration-style: solid;
+            }
+
         </style>
     </head>
     <body>
@@ -76,25 +89,17 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}" id="a1">Agregar Usuarios</a>
+                        <a href="{{ url('/home') }}" class="a">Agregar Usuarios</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
+                        <a href="{{ route('login') }}" class="a">Login</a>
+                        <a href="{{ route('register') }}" class="a">Register</a>
                     @endauth
                 </div>
             @endif
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    CRUD
                 </div>
             </div>
         </div>
